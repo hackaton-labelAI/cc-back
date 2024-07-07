@@ -5,7 +5,9 @@
 - Сохранённая информация https://github.com/hackaton-labelAI/cc-data
 - Поиск https://github.com/hackaton-labelAI/cc-back
 
-**Для проверки готового решения** перейдите на https://caila.io/app/just-ai/mlp-gpt-chat-app.
+**Для проверки готового решения** Регистрируем на платформе https://caila.io/
+
+перейдите на https://caila.io/app/just-ai/mlp-gpt-chat-app.
 Далее нам надо добавить наш сервис ![img.png](img.png)
 Далее нажимаем на кнопку выбора сервиса и переходим в режим разработчика
 ![img_1.png](img_1.png)
