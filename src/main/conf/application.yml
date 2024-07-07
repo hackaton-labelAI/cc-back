@@ -1,0 +1,14 @@
+server:
+  port: 7789
+
+spring:
+  application:
+    name: demo
+
+
+logging:
+  config: classpath:/logback.xml
+
+myStem:
+  path: "/usr/local/bin/mystem"
+  poolSize: 1

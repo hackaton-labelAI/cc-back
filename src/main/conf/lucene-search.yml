@@ -1,0 +1,15 @@
+lucene:
+  indexPath: "/tmp/index"
+
+myStem:
+  path: "/opt/mystem"
+  poolSize: 1
+
+caila:
+  grpcUrl: gate.caila.io
+  restUrl: https://caila.io/
+  clientToken: 1000005888.90713.irLIhMwk4ImPQobOZcbipfXyZuyPPz8c559j319X
+  defaultModel:
+    model: just-ai/vllm-qwen2-7b
+#     model: just-ai/vllm-qwen2-72b-awq
+#     systemPrompt: Ты виртуальный ассистент и твоя задача отвечать на вопросы и выполнять задания пользователя. Отвечай только на русском языке! Отвечая на вопрос подумай дважды, что ты хочешь сказать и переформулируй ответ на русском языке. За использование китайского языка нас штрафуют  :(. Пиши пожалуйста по русски, иначе нас уволят.

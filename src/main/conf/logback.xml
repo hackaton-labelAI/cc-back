@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout>
+            <pattern>%d [u:%X{currentUser},d:%X{currentDesk},r:%X{requestId}] %5p [%8c] - %m %n</pattern>
+        </layout>
+    </appender>
+
+
+    <logger name="org.eclipse.jetty" level="WARN" additivity="true"/>
+    <logger name="net.sf.ehcache" level="ERROR" additivity="true"/>
+    <logger name="org.flywaydb" level="ERROR" additivity="true"/>
+    <logger name="org.hibernate" level="ERROR" additivity="true"/>
+    <logger name="org.springframework" level="WARN" additivity="true"/>
+
+    <appender name="GELF" class="de.appelgriepsch.logback.GelfAppender">
+        <server>127.0.0.1</server>
+        <port>12201</port>
+        <protocol>TCP</protocol>
+        <includeSource>true</includeSource>
+        <includeMDC>true</includeMDC>
+        <queueSize>500</queueSize>
+        <connectTimeout>1000</connectTimeout>
+        <reconnectDelay>500</reconnectDelay>
+        <additionalFields>app=eventos</additionalFields>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%5p [%8c] - %m</pattern>
+        </layout>
+    </appender>
+
+    <root level="INFO">
+<!--        <appender-ref ref="GELF"/>-->
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
+
